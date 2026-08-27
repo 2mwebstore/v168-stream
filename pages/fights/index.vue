@@ -144,7 +144,7 @@ const { openFighterModal } = useFighterModal()
                   :aria-label="`View ${f.red_fighter}`"
                   @click="openFighterModal(f.red_image || DEFAULT_LEFT_IMAGE, DEFAULT_LEFT_IMAGE, f.red_fighter, 'meron')"
                 >
-                  <img :src="DEFAULT_LEFT_IMAGE" :alt="f.red_fighter" loading="lazy">
+                  <img :src="f.red_image || DEFAULT_LEFT_IMAGE" :alt="f.red_fighter" loading="lazy">
                 </div>
                 <div class="fighter-name text-xs sm:text-sm">{{ f.red_fighter }}</div>
               </div>
@@ -175,7 +175,7 @@ const { openFighterModal } = useFighterModal()
                   :aria-label="`View ${f.blue_fighter}`"
                   @click="openFighterModal(f.blue_image || DEFAULT_RIGHT_IMAGE, DEFAULT_RIGHT_IMAGE, f.blue_fighter, 'wala')"
                 >
-                  <img :src="DEFAULT_RIGHT_IMAGE" :alt="f.blue_fighter" loading="lazy">
+                  <img :src="f.blue_image || DEFAULT_RIGHT_IMAGE" :alt="f.blue_fighter" loading="lazy">
                 </div>
                 <div class="fighter-name text-xs sm:text-sm">{{ f.blue_fighter }}</div>
               </div>
